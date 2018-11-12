@@ -10,7 +10,7 @@ http://ufldl.stanford.edu/housenumbers/
 `import data_loader` or `from . import data_loader`
 Note: import statement depends on your source root
 
-### data_loader.***load_train_data***(*train_file_path*, *axes*, *valid_rate*)
+### data_loader.***load_train_data***(*train_file_path*, *axes*=(3, 2, 0, 1), *valid_rate*=0.1)
 **Input**
 - ***train_file_path***: training file path of 'train_32x32.mat'
 - ***axes***: numpy matrix axes, (3, 2, 0, 1) by default
@@ -23,7 +23,7 @@ Note: import statement depends on your source root
 - ***valid_labels***: validation label array (numpy.ndarray)
 
 ---
-### data_loader.***load_test_data***(*test_file_path*, *axes*)
+### data_loader.***load_test_data***(*test_file_path*, *axes*=(3, 2, 0, 1))
 **Input**
 - ***test_file_path***: test file path of 'test_32x32.mat'
 - ***axes***: numpy matrix axes, (3, 2, 0, 1) by default

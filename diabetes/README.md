@@ -10,7 +10,7 @@ http://ufldl.stanford.edu/housenumbers/
 `import data_loader` or `from . import data_loader`
 Note: import statement depends on your source root
 
-### data_loader.***load_dataset***(*file_path*, *valid_rate*)
+### data_loader.***load_dataset***(*file_path*, *valid_rate*=0.1)
 **Input**
 - ***file_path***: label file path e.g. 'dataset_diabetes/diabetic_data.csv'
 - ***valid_rate***: validation data rate (0 - 1), 0.1 by default

@@ -9,7 +9,7 @@ http://ai.stanford.edu/~amaas/data/sentiment/
 `import data_loader` or `from . import data_loader`
 Note: import statement depends on your source root
 
-### data_loader.***load_train_data***(*train_dir_path*, *valid_rate*)
+### data_loader.***load_train_data***(*train_dir_path*, *valid_rate*=0.1)
 **Input**
 - ***train_dir_path***: training directory path e.g. './aclImdb/train/'
 - ***valid_rate***: validation data rate (0 - 1), 0.1 by default

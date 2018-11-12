@@ -10,7 +10,7 @@ http://ufldl.stanford.edu/housenumbers/
 `import data_loader` or `from . import data_loader`
 Note: import statement depends on your source root
 
-### data_loader.***load_train_data***(*train_file_path*, *valid_rate*, *is_df*)
+### data_loader.***load_train_data***(*train_file_path*, *valid_rate*=0.1, *is_df*=True)
 **Input**
 - ***train_file_path***: training file path of 'adult.data'
 - ***valid_rate***: validation data rate (0 - 1), 0.1 by default
@@ -23,7 +23,7 @@ Note: import statement depends on your source root
 - ***valid_labels***: validation label array (numpy.ndarray)
 
 ---
-### data_loader.***load_test_data***(*test_file_path*, *is_df*)
+### data_loader.***load_test_data***(*test_file_path*, *is_df*=True)
 **Input**
 - ***test_file_path***: test file path of 'adult.test'
 - ***is_df***: whether or not returned objects are pandas.DataFrame, True by default

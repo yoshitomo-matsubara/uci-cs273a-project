@@ -10,7 +10,7 @@ https://github.com/muxspace/facial_expressions
 `import data_loader` or `from . import data_loader`
 Note: import statement depends on your source root
 
-### data_loader.***load_dataset***(*img_dir_path*, *label_file_path*, *valid_rate*)
+### data_loader.***load_dataset***(*img_dir_path*, *label_file_path*, *valid_rate*=0.1)
 **Input**
 - ***img_dir_path***: directory path of 'images/'
 - ***label_file_path***: label file path e.g. 'data/legend.csv'

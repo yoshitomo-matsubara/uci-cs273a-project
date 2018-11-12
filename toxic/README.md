@@ -10,7 +10,7 @@ https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
 `import data_loader` or `from . import data_loader`
 Note: import statement depends on your source root
 
-### data_loader.***load_train_data***(*train_file_path*, *valid_rate*, *is_df*)
+### data_loader.***load_train_data***(*train_file_path*, *valid_rate*=0.1, *is_df*=True)
 **Input**
 - ***train_file_path***: file path of 'train.csv'
 - ***valid_rate***: validation data rate (0 - 1), 0.1 by default
@@ -29,7 +29,7 @@ Note: import statement depends on your source root
 - ***valid_labels***: validation label 2D-array (numpy.ndarray, 6 columns, 0: negative, 1:positive)
 
 ---
-### data_loader.***load_test_data***(*test_file_path*, *test_label_file_path*, *is_df*)
+### data_loader.***load_test_data***(*test_file_path*, *test_label_file_path*, *is_df*=True)
 **Input**
 - ***train_file_path***: file path of 'test.csv'
 - ***test_label_file_path***: file path of 'test_labels.csv'
