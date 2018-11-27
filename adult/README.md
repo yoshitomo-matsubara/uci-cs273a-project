@@ -1,5 +1,5 @@
 # Basic Support for Adult Dataset
-http://ufldl.stanford.edu/housenumbers/
+https://archive.ics.uci.edu/ml/datasets/adult
 
 ## Requirements
 - Python 3.6 >=
