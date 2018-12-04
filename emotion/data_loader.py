@@ -42,5 +42,5 @@ def load_dataset(img_dir_path, label_file_path, valid_rate=0.1):
     zipped_train_list = list(zip(train_file_path_list, train_label_list))
     random.shuffle(zipped_train_list)
     train_file_paths, train_labels = zip(*zipped_train_list)
-    return [*train_file_paths], np.array([*train_labels]), valid_file_path_list, np.array(valid_label_list),\
+    return list(train_file_paths), np.array(list(train_labels)), valid_file_path_list, np.array(valid_label_list),\
            test_file_path_list, np.array(test_label_list), label_dict

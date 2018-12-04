@@ -41,5 +41,5 @@ def load_dataset(file_path, valid_rate=0.1):
     zipped_train_list = list(zip(train_features_list, train_label_list))
     random.shuffle(zipped_train_list)
     test_features, train_labels = zip(*zipped_train_list)
-    return np.stack([*test_features]), np.array([*train_labels]), np.stack(valid_features_list),\
+    return np.stack(list(test_features)), np.array(list(train_labels)), np.stack(valid_features_list),\
            np.array(valid_label_list), np.stack(test_features_list), np.array(test_label_list), label_dict

@@ -58,7 +58,7 @@ def load_train_data(train_dir_path, valid_rate=0.1):
     zipped_valid_list = list(zip(valid_text_list, valid_label_list))
     random.shuffle(zipped_valid_list)
     valid_texts, valid_labels = zip(*zipped_valid_list)
-    return [*train_texts], np.array([*train_labels]), [*valid_texts], np.array([*valid_labels])
+    return list(train_texts), np.array(list(train_labels)), list(valid_texts), np.array(list(valid_labels))
 
 
 def load_test_data(test_dir_path):
@@ -70,10 +70,10 @@ def load_test_data(test_dir_path):
     test_text_list.extend(pos_texts)
     test_text_list.extend(neg_texts)
     test_labels = np.hstack([np.ones(len(pos_texts), dtype=np.int), np.zeros(len(neg_texts), dtype=np.int)])
-    zipped_test_list = list(zip(test_text_list, [*test_labels]))
+    zipped_test_list = list(zip(test_text_list, list(test_labels)))
     random.shuffle(zipped_test_list)
     test_texts, test_labels = zip(*zipped_test_list)
-    return [*test_texts], np.array([*test_labels])
+    return list(test_texts), np.array(list(test_labels))
 
 
 def load_vocab_dict(vocab_file_path):
