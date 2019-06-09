@@ -32,9 +32,16 @@ def load_dataset(img_dir_path, label_file_path, valid_rate=0.1):
     test_label_list = list()
     for label in label_data_dict.keys():
         data = label_data_dict[label]
-        test_size = int(len(data) * 0.1)
+        data_size = len(data)
+        test_size = int(data_size * 0.1)
+        if test_size == 0 and data_size >= 3:
+            test_size = 1
+
         train_data = data[:-test_size]
         valid_size = int(len(train_data) * valid_rate)
+        if valid_size == 0 and data_size >= 3:
+            valid_size = 1
+
         __append_data(train_data[:-valid_size], train_file_path_list, train_label_list, img_dir_path, label_dict)
         __append_data(train_data[-valid_size:], valid_file_path_list, valid_label_list, img_dir_path, label_dict)
         __append_data(data[-test_size:], test_file_path_list, test_label_list, img_dir_path, label_dict)
